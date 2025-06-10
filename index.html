@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Produktów</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Katalog Produktów</h1>
+
+    <button id="toggleDarkMode" class="btn">Tryb ciemny</button>
+
+    <section id="filters">
+      <label for="search">Szukaj:</label>
+      <input type="text" id="search" placeholder="Wpisz nazwę produktu...">
+
+      <label for="sort">Sortuj:</label>
+      <select id="sort">
+        <option value="name">Nazwa</option>
+        <option value="price">Cena</option>
+      </select>
+    </section>
+  </header>
+
+  <main id="catalog"></main>
+
+  <section id="add-product">
+    <h2>Dodaj produkt</h2>
+    <form id="productForm">
+      <input type="text" id="name" placeholder="Nazwa" required>
+      <input type="number" id="price" placeholder="Cena" required>
+      <textarea id="description" placeholder="Opis"></textarea>
+      <input type="file" id="image" accept="image/*">
+      <button type="submit">Dodaj</button>
+    </form>
+  </section>
+
+  <dialog id="productDialog">
+    <div id="dialogContent"></div>
+    <button id="closeDialog">Zamknij</button>
+  </dialog>
+
+  <footer>
+    <a href="contact.html" class="btn">Kontakt</a>
+  </footer>
+
+</body>
+
+</html>
